@@ -12,7 +12,7 @@ public class Cliente {
             Ponto a = new Ponto(xA, yA);
             Ponto b = new Ponto(xB, yB);
 
-            String distancia = a.distancia(b);
+            int distancia = (int) a.distancia(b);
             System.out.print(distancia);
         }
     }

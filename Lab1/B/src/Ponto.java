@@ -1,21 +1,21 @@
 public class Ponto {
-    double x;
-    double y;
+    private double x;
+    private double y;
 
     Ponto(double x, double y){
+        if (!VerificaQuadrante(x, y) || !VerificaDistanciaCentro(x, y)) {
+            System.out.print("iv");  
+            System.exit(0);      
+        }
         this.x = x;
         this.y = y;
     }
 
-    public String distancia(Ponto p) {
-        if (VerificaQuadrante(this.x, this.y) == true && VerificaQuadrante(p.x, p.y) == true && VerificaDistanciaCentro(this.x, this.y)==true && VerificaDistanciaCentro(p.x,p.y)) {
+    public double distancia(Ponto p) {
             double thetaA= this.y;
             double thetaB = p.y;
-            int resultado = (int) Math.sqrt(Math.pow(this.x, 2) + Math.pow(p.x, 2) - 2 * this.x*p.x * (Math.cos(thetaA - thetaB)));
-            return String.valueOf(resultado);  // Retorna o resultado como String
-        } else {
-            return "iv";
-        }
+            double resultado =  Math.sqrt(Math.pow(this.x, 2) + Math.pow(p.x, 2) - 2 * this.x*p.x * (Math.cos(thetaA - thetaB)));
+            return resultado;
     }    
 
     private boolean VerificaQuadrante(double x, double y){

@@ -12,9 +12,10 @@ public class Cliente {
                 double y = sc.nextDouble();
                 pontos[i] = new Ponto(x,y);
             }
-            String TamanhoTotal = Ponto.CalcularTamanho(pontos);
+            Caminho caminho = new Caminho(pontos);
+            double TamanhoTotal = caminho.CalcularTamanho();
 
-            System.out.print(TamanhoTotal);
+            System.out.printf("%.2f", TamanhoTotal);
         }
     }
 }
