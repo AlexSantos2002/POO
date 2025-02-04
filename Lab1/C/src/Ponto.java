@@ -1,13 +1,13 @@
 public class Ponto {
-    double x;
-    double y;
+    private double x;
+    private double y;
 
     Ponto(double x, double y){
         this.x = x;
         this.y = y;
     }
 
-    public double distancia(Ponto p) {
+    private double distancia(Ponto p) {
         if (VerificaQuadrante(this.x, this.y) == true && VerificaQuadrante(p.x, p.y) == true && VerificaDistanciaCentro(this.x, this.y)==true && VerificaDistanciaCentro(p.x,p.y)) {
             double thetaA= Math.toRadians(this.y);
             double thetaB = Math.toRadians(p.y);
@@ -20,7 +20,7 @@ public class Ponto {
     }    
 
     private boolean VerificaQuadrante(double x, double y){
-        if (x>=0 && y>=0){
+        if (x>=0 && y>=0 && y<=90){
             return true;
         } else{
             return false;
