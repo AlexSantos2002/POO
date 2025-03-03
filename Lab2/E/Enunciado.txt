@@ -1,0 +1,61 @@
+Problema E: Interseção entre um Círculo e um Segmento de reta 
+ 
+Desenvolva um programa que dado um círculo, conforme definido no problema anterior e um 
+segmento de reta definido por dois pontos em coordenadas cartesianas, determine se o segmento 
+interseta ou não o círculo; ou indique se existiu alguma violação da condição invariante de instância 
+em alguma das classes. 
+ 
+Entrada  
+A entrada é composta por duas linhas.  
+A primeira linha contém dois números inteiros XC, YC, que representam as coordenadas cartesianas 
+no centro do círculo e um double que representa o raio do círculo. 
+A segunda linha contém quatro números inteiros que representam, respetivamente, as coordenadas 
+(x,y) do primeiro e do segundo ponto do segmento: X1 Y1   X2, Y2
+Saída 
+Uma linha com uma das opções seguintes: 
+ 
+i) “Ponto:vi”; mensagem indicando que um ponto não é do primeiro quadrante; 
+ii) “Segmento:vi”; indicação de que dois pontos não formam um segmento de reta; 
+iii) “Circulo:vi”; indicação de que o círculo não está todo no primeiro quadrante;  
+iv) 1, se houver alguma interceção; 0 caso contário. 
+ 
+ 
+ 
+Exemplo de Entrada 1 
+2 2 1.0 
+1 3 3 1  
+Exemplo de Saída 1 
+1 
+ 
+Exemplo de Entrada 2 
+2 2 1.0 
+1 4 3 3  
+Exemplo de Saída 2 
+0 
+ 
+Exemplo de Entrada 3 -1 0 1.0 
+1 3 3 1 
+Exemplo de Saída 3 
+Ponto:vi 
+ 
+Exemplo de Entrada 4 
+1 1 2.0 
+1 3 3 1 
+Exemplo de Saída 4 
+Circulo:vi 
+ 
+ 
+Restrições complementares 
+Seguindo os princípios da programação orientada por objetos, o programa deverá estar estruturado 
+segundo um conjunto de classes apropriadas. 
+ 
+ 
+Nos comentários indique  
+i) Uma linha com a descrição da responsabilidade da classe ou do que o método faz 
+ii) @author (apenas para classes) 
+iii) @version (apenas para classes; inclua uma data) 
+iv) @inv (apenas para classes; inclua uma descrição da invariante usada) 
+v) @param (apenas para métodos e construtores) 
+vi) @return (apenas para métodos) 
+vii) @see (qualquer referência bibliográfica ou sitio web consultado para o desenvolvimento 
+do código respetivo)  
