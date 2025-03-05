@@ -4,7 +4,7 @@
  * Permite calcular a menor distância do segmento ao centro de um círculo.
  *
  * @author Alexandre Santos
- * @version 2.0 20/02/2025
+ * @version 3.0 05/03/2025
  * @inv Os pontos do segmento devem estar totalmente no primeiro quadrante e não podem ser coincidentes.
  */
 public class Segmento {

@@ -4,9 +4,8 @@
  * e fornece uma representação em string desses pontos.
  *
  * @author Alexandre Santos
- * @version 1.0 04/03/2025
+ * @version 2.0 05/03/2025
  * @inv Os pontos do retângulo devem estar no primeiro quadrante (x >= 0, y >= 0) e devem formar um retângulo válido
- *      (com ângulos de 90 graus e distâncias adequadas entre os pontos).
  */
 public class Retangulo {
     private Ponto[] pontos = new Ponto[4];

@@ -1,5 +1,7 @@
-/**
- * Classe que representa um ponto em um plano cartesiano
+ /**
+ * @author Alexandre Santos
+ * @version 3.0 05/03/2025
+ * @inv Classe que representa um ponto em um plano cartesiano
  */
 public class Ponto {
     private double x;
