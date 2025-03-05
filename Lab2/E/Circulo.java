@@ -5,15 +5,17 @@ package Lab2.E;
  * @author Alexandre Santos
  * @version 3.0 20/02/2025
  * @inv O círculo deve estar totalmente no primeiro quadrante
- * @param centro Ponto central do círculo
- * @param raio Raio do círculo
- * @return Perímetro do círculo
- * @see
  */
 public class Circulo {
     private Ponto centro;
     private double raio;
 
+    /**
+     * Construtor da classe Circulo
+     * @param centro Ponto central do círculo
+     * @param raio Raio do círculo
+     * @throws IllegalArgumentException se o círculo não estiver no primeiro quadrante ou se o raio for inválido
+     */
     public Circulo(Ponto centro, double raio) {
         if (!centro.noPrimeiroQuadrante()) { 
             throw new IllegalArgumentException("Ponto:vi");
@@ -25,14 +27,27 @@ public class Circulo {
         this.raio = raio;
     }
 
+    /**
+     * Calcula o perímetro do círculo
+     * @return Perímetro do círculo
+     */
     public double calcularPerimetro() {
         return 2 * Math.PI * raio;
     }
 
+    /**
+     * Retorna o perímetro do círculo como um número inteiro
+     * @return Perímetro do círculo convertido para inteiro
+     */
     public int getPerimetroInteiro() {
         return (int) calcularPerimetro();
     }
 
+    /**
+     * Verifica se um segmento de reta intersecta o círculo
+     * @param segmento Segmento a ser verificado
+     * @return true se o segmento intersecta o círculo, false caso contrário
+     */
     public boolean intersetaSegmento(Segmento segmento) {
         return segmento.distanciaPontoAoCentro(centro) <= raio;
     }
