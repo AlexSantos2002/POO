@@ -1,7 +1,22 @@
+/**
+ * Classe que representa um segmento de reta definido por dois pontos.
+ * Garante que os pontos estão no primeiro quadrante e que não são coincidentes.
+ * Permite calcular a menor distância do segmento ao centro de um círculo.
+ *
+ * @author Alexandre Santos
+ * @version 2.0 20/02/2025
+ * @inv Os pontos do segmento devem estar totalmente no primeiro quadrante e não podem ser coincidentes.
+ */
 public class Segmento {
     private Ponto p1;
     private Ponto p2;
 
+    /**
+     * Construtor da classe Segmento
+     * @param p1 Ponto inicial do segmento
+     * @param p2 Ponto final do segmento
+     * @throws IllegalArgumentException Se os pontos não estiverem no primeiro quadrante ou forem coincidentes
+     */
     public Segmento(Ponto p1, Ponto p2) {
         if (!p1.noPrimeiroQuadrante() || !p2.noPrimeiroQuadrante()) {
             throw new IllegalArgumentException("Ponto:vi");
@@ -13,6 +28,11 @@ public class Segmento {
         this.p2 = p2;
     }
 
+    /**
+     * Calcula a distância mínima do segmento ao centro de um círculo
+     * @param centro O ponto central do círculo
+     * @return A menor distância do segmento até o centro
+     */
     public double distanciaPontoAoCentro(Ponto centro) {
         double x0 = centro.getX();
         double y0 = centro.getY();
@@ -36,5 +56,4 @@ public class Segmento {
             return numerador / denominador;
         }
     }
-    
 }
