@@ -5,16 +5,17 @@ package Lab2.E;
  * @author Alexandre Santos
  * @version 2.0 20/02/2025
  * @inv Os pontos do segmento devem estar totalmente no primeiro quadrante e não podem ser coincidentes
- * @param p1 Ponto inicial do segmento
- * @param p2 Ponto final do segmento
- * @return Distância mínima do segmento ao centro de um círculo
- * @see
  */
-
- public class Segmento {
+public class Segmento {
     private Ponto p1;
     private Ponto p2;
 
+    /**
+     * Construtor da classe Segmento
+     * @param p1 Ponto inicial do segmento
+     * @param p2 Ponto final do segmento
+     * @throws IllegalArgumentException se os pontos não estiverem no primeiro quadrante ou forem coincidentes
+     */
     public Segmento(Ponto p1, Ponto p2) {
         if (!p1.noPrimeiroQuadrante() || !p2.noPrimeiroQuadrante()) {
             throw new IllegalArgumentException("Ponto:vi");
@@ -26,7 +27,11 @@ package Lab2.E;
         this.p2 = p2;
     }
 
-    // Distância do segmento ao centro do círculo
+    /**
+     * Calcula a distância mínima do segmento ao centro de um círculo
+     * @param centro Ponto central do círculo
+     * @return Distância mínima do segmento ao centro do círculo
+     */
     public double distanciaPontoAoCentro(Ponto centro) {
         double x0 = centro.getX();
         double y0 = centro.getY();
