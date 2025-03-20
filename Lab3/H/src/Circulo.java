@@ -1,7 +1,7 @@
 /**
  * Classe que representa um Círculo com um ponto central e um raio
  * @author Alexandre Santos
- * @version 4.0 05/03/2025
+ * @version 5.0 05/03/2025
  * @inv O círculo deve estar totalmente no primeiro quadrante
  */
 public class Circulo {
